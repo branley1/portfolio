@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Branley's Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', sans-serif;
+    font-size: 18px;
+    color: #ececff;
+  }
+  
+  header {
+    position: relative;
+    background-color: #33473a;
+    color: #bdd6bb;
+    padding: 20px;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 999;
+    border-radius: 20px 20px;
+  }
+  
+  header img {
+    width: 150px;
+    height: 150px;
+    border-radius: 30%;
+    margin-bottom: 10px;
+  }
+  .header-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  
+  header h1 {
+    font-size: 36px;
+    margin: 0;
+  }
+  
+  header p {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  /*Navigation bar at the top of the page, below the header, this adjusts the look and feel*/
+  .navbar {
+    background-color: #2a3c2e;
+    position: fixed;
+    color: #ececff;
+    padding: 0.5rem;
+    padding-bottom: 0.5rem;
+    z-index: 998;
+    border-radius: 20px 20px;
+  }
+  
+  .navbar a {
+    color: #ececff;
+    text-decoration: none;
+    justify-content: space-between;
+    margin: 0 30px;
+    font-size: 20px;
+  }
+
+  /* trying to achieve a swarthmore-style navigation bar that appears and reappears when scrolling */
+  .navbar.fixed{
+    background-color: #2a3c2e;
+    color: #c3edc0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: none;
+    z-index: 998;
+}
+  
+  .container {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  
+  section {
+    margin: 10px;
+  }
+  
+  /* Section titles, such us Professional, Extracurr- etc */
+  section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #bdd6bb; /* Change the color to whatever you prefer */
+  }  
+  
+  
+  form label {
+    display: block;
+    margin-bottom: 10px;
+  }
+   /*To display the extracurricular section, this code sets the basic styles for the job title, location, dates, and description. job-dates is positioned on the right of the job using the "margin-left: auto" property*/
+   .experience-section {
+    margin-bottom: 30px;
+  }
+  
+  .job {
+    margin-bottom: 50px;
+  }
+  
+  .job h3 {
+    margin: 0 0 10px;
+  }
+  
+  .job p {
+    margin: 0;
+  }
+  
+  .job .location {
+    font-style: italic;
+  }
+  
+  .job .date {
+    float: right;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  
+  .job-entry {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  
+  .job-title {
+    font-weight: bold;
+  }
+  
+  .job-location {
+    margin-bottom: 10px;
+  }
+  
+  .job-dates {
+    margin-left: auto;
+    float: right;
+    font-size: 0.8em;
+    font-weight: bold;
+  }
+  
+  .job-description {
+    margin-top: 10px;
+  }
+
+  form input,
+  form textarea {
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 3px;
+  }
+  
+  form input[type="submit"] {
+    background-color: #242431;
+    color: #ececff;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #2d3d32;
+  }
+  
+  /*set footer element to 10%*/
+  .footer{
+      height: 10%
+  }
+  
+  /* Additional styling for to create the green aesthetic vibe that contrasts the profile photo */
+  
+  body {
+    background-color: #213a31;
+    color: #bdd6bb;
+    /* ececff */
+
+    /* to make the body of the website occupy 85% of the browser window */
+    margin: 0 auto;
+    max-width: 95%;
+
+  }
+  
+  header h1 {
+    font-size: 36px;
+  }
+  
+  header p {
+    font-size: 18px;
+  }
+  
+  .navbar {
+    background-color: #03180bfe;
+  }
+  
+  .navbar a {
+    font-size: 24px;
+    transition: color 0.2s;
+  }
+  
+  .navbar a:hover {
+    color: #006699;
+  }
+  
+  section h2 {
+    font-size: 28px;
+  }
+  
+  ul li a {
+    color: #d4d3e5;
+    font-size: 14px;
+    transition: color 0.2s;
+  }
+  
+  ul li a:hover {
+    color: #006699;
+  }
+
+/* To make the links the same color as other text even when clicked */
+a {
+  color: #f8f8f8;
+  text-decoration: none; /* to remove the default underline */
+}
+
+a:hover {
+  color: #006699;  /* to add color on hover*/
+  text-decoration: underline; /* to add the underline on hover */
+}
+
+a:visited {
+  color: #f8f8f8; /* to set color of visited links to the same as normal links */
+}
+
+/* Make the job descriptions are white, or a lighter shade of green than the rest of the body */
+  .description {
+    color: #defae0;
+  }
+  form input[type="submit"] {
+    background-color: #03180bfe;
+    font-size: 12px;
+    transition: background-color 0.2s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #03180bfe;
+  }
+
+/* Create contact information section with blue hyperllinks, and turn to light green 0n hover */
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #bdd6bb;  /* to add color on hover*/
+  text-decoration: underline; /* to add the underline on hover */
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+main{
+  margin-top: 100px; /* Adjust to match navbar height */
+}
+
+  </style>
+</head>
+<nav class="navbar">
+  <div class="container">
+    <a href="second-website.html">Who Am I?</a>
+    <a href="second-website.html#course-highlight">Course Highlight</a>
+    <a href="relevant-exp-second-web.html">Relevant Experience</a>
+    <a href="second-website.html#project">Projects & Certifications</a>
+    <a href="#contact">Contact Information</a>
+  </div>
+</nav>
+<body>
+  <header>
+    <img src="/Users/branley/Desktop/untitled folder/personal-website/picforwebsite.jpeg" alt="Profile Picture">
+    <h1>Branley Mmasi</h1>
+    <p>A Computer Science major and Cognitive Science minor at Swarthmore College</p>
+  </header>
+  <section><h6>[Scroll up to access full menu]</h6></section>
+  
+
+    <section>
+        <div class="experience">
+            <h2>Professional Experience</h2>
+            <div class="job">
+            <h3>Amiva Kenya</h3>
+            <p class="date">March 2022 - November 2022</p>
+            <p class="location">Nairobi, Kenya</p><br>
+            <p class="description"> Collaborated with Amiva Kenya's Engineering team to build the organization's payments infrastructure to develop and integrate backend logic with Python & Django, utilizing MySQL and RabbitMQ to enhance stability and performance.</p>
+        </div>
+        
+        <div class="job">
+            <h3>CodePath.org</h3>
+            <p class="date">January 2022 - April 2022</p>
+            <p class="location">Pennsylvania, US</p><br>
+            <p class="description">Created iOS applications with Swift, graduated with Advanced Honors in CodePath's Intro to Mobile App Development. Developed a fully functioning iOS Flashcard app as part of the Codepath Intro to Mobile Development — iOS class.</p>
+        </div>
+        
+        <div class="job">
+            <h3>Google Developers Student Club</h3>
+            <p class="date">September 2021 - November 2021</p>
+            <p class="location">Pennsylvania, US</p><br>
+            <p class="description">Attended hands-on workshop on Intro to App Development and worked on the basics of Mobile App Development with React Native.</p>
+        </div>
+        
+        <div class="job">
+            <h3>Code In Place (with Stanford University) </h3>
+            <p class="date">April 2021 - July 2021</p>
+            <p class="location">California, US</p><br>
+            <p class="description">Learned the fundamentals of computer programming using the widely-used Python programming language as part of the CS106A course at Stanford University.</p>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="experience-section">
+            <h2>Extracurricular & Leadership Experience</h2>
+        
+            <div class="job">
+            <h3>Resident Assistant, Dana Hall at Swarthmore College</h3>
+            <p class="date">July 2022 - Present</p>
+            <p class="location">Pennsylvania, US</p>
+            <br>
+            <p class="description"> Maintain the health, safety, and welfare of Dana Hall residents at Swarthmore College by organizing hall events to address academic, social and personal interests of residents.</p> <br>
+            <p class="description"> Serve as a liaison between College administration and students, and as an advisor, activity coordinator, and facilitator during college functions and at the dorm level.</p><br>
+            <p class="description">Develop and demonstrate ethical leadership and professional skills by assessing situations and confidentially counsel students to help resolve conflicts and/or concerns.</p> <br>
+            <p class="description"> Directly supervise 26 residents. </p>
+            </div>
+        
+            <div class="job">
+            <h3>Multicultural Recruitment Intern, Swarthmore Admissions Office</h3>
+            <p class="date">October 2021 - Present</p>
+            <p class="location">Pennsylvania, US</p><br>
+            <p class="description"> Work closely with the Admissions Office Access Team at Swarthmore College on the recruitment of traditionally marginalized populations.</p><br>
+            <p class="description">Assist in recruiting current student hosts, event student workers, tour guides, and other front-facing student representatives.</p><br>
+            <p class="description"> Help facilitate the Admissions Office recruitment (Discover Swarthmore) and yield events (Swatlight/Swatstruck).</p>
+            </div>
+        
+            <div class="job">
+            <h3>Academic Tutor &amp; SWE Intern</h3>
+            <p class="date">March 2022 - November 2022</p>
+            <p class="location">Nairobi, Kenya</p><br>
+            <p class="description"> Served as an academic tutor to high school students in Kenya applying to US universities and colleges.</p><br>
+            <p class="description"> Mentored students through essay writing, helping them practice for aptitude tests and creating a comprehensive college application.</p>
+            </div>
+            <div class="job">
+                <h3>Computer Labs Captain</h3>
+                <p class="date">Nov 2017 - Nov 2018 (1 year, 1 month)</p>
+                <p class="location">Kimilili, Kenya</p><br>
+                <p class="description"> Managed all student-accessible technological devices on campus.
+                Handled software upgrades & installations bi-weekly.</p><br>
+                <p class="description"> Oversaw use of lab resources and represented all the 90 Computer Studies students.</p>
+            </div>
+            
+            <div class="job">
+                <h3>Club President</h3>
+                <p class="date">Jan 2017 - Nov 2018 (1 year, 11 months)</p>
+                <p class="location">Kimilili, Kenya</p>
+                <p class="description"> Supervised a team of 20 through the implementation of science and engineering projects.</p><br>
+                <p class="description"> Organized an "Early-Bird" program that ensured early design proposals and refining of projects which increased overall productivity, increasing the number of projects presented at the national level.</p><br>
+                <p class="description"> Planned mock science project competition events thrice a month to build confidence in presenters, identifying potential faults and proposing solutions and/or alternatives.</p><br>
+                <p class="description"> Contested at the national competitions in April 2018.</p>
+            </div>
+            
+            <div class="job">
+                <h3>Voice Leader, Tenors</h3>
+                <p class="date">Apr 2016 - Aug 2018 (2 years, 5 months)</p>
+                <p class="location">Kimilili, Kenya</p><br>
+                <p class="description"> Led practice sessions of 12 tenor singers every day for 16 weeks/year; dedicated up to 10 hours per week to intensive training on understanding and singing musical notes as a group.</p><br>
+                <p class="description"> Auditioned prospective tenor singers and trained the recruits every week.</p><br>
+                <p class="description"> Coordinated the choir to compete in the Advanced Set Piece category in July 2016, Nationals.</p>
+            </div>
+            
+            <div class="job">
+                <h3>Community Health Representative</h3>
+                <p class="date">Nov 2017 - Present (5 years, 6 months)</p>
+                <p class="location">Kakamega, Kenya</p><br>
+                <p class="description"> Reduce health disparities in underserved communities.</p><br>
+                <p class="description"> Provide informal counseling to community members.</p><br>
+                <p class="description"> Educate health providers of the community health needs.</p>
+            </div>              
+        
+        </div>          
+    </section>
+
+    <section>
+        <section class="contact" id="contact">
+            <h2>Contact Information</h2>
+            <div class="contact-info">
+              <div class="address">
+                <i class="fas fa-map-marker-alt"></i>
+                <p>500 College Ave,<br>Swarthmore, PA 19081,<br>USA</p>
+              </div>
+              <div class="email">
+                <i class="far fa-envelope"></i>
+                <a href="mailto:barneybranley@gmail.com">Send me an email 📧</a>
+              </div>
+              <div class="phone">
+                <p> <i class="fas fa-phone"></i> Phone: (610) 604-8734</p>
+              </div>
+            </div>
+            <div class="contact-info">
+              <p>LinkedIn: <a href="https://www.linkedin.com/in/bmmasi1/" target="_blank"><i class="fab fa-linkedin"></i> Branley Mmasi</a><br></p>
+              <p>Handshake: <a href="https://app.joinhandshake.com/stu/users/33096003" target="_blank">Branley Mmasi</a></p>
+            </div>
+          </section>
+        <h3>Leave me a message</h3>
+        <form>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+          
+          <label for="email">Email</label>
+          <input type="text" id="email" name="email" required>
+          
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+          
+          <input type="submit" value="Send">
+        </form>
+      </section>
+  
+      <section>
+            <a href="relevant-exp-second-web.html"> Back To Top</a><br><br>
+            <a href="second-website.html">Go to Home</a>
+      </section>
+    
+      <!-- footer for the page -->
+    <footer>
+        <nav class="navbar">
+          <div class="container">
+            <a href="second-website.html">Who Am I?</a>
+            <a href="#course-highlight">Course Highlight</a>
+            <a href="relevant-exp-second-web.html">Relevant Experience</a>
+            <a href="#project">Projects & Certifications</a>
+            <a href="#contact">Contact Information</a><br><br>
+            <a href="second-website.html">Back To Top</a>
+          </div>
+        </nav>
+      </footer> 
+    </main>
+    </body>
+</html>

@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Branley's Portal</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/github.min.css" />
+  <link rel="stylesheet" href="style.css">
+  <style>body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', sans-serif;
+  font-size: 18px;
+}
+/* adjusts settings for the header on the main page */
+header {
+  background-color: #33473a;
+  color: #bdd6bb;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 999;
+  border-radius: 20px 20px 0 0;
+}
+
+header img {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  margin-bottom: 10px;
+}
+.header-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 36px;
+  margin: 0;
+}
+
+header p {
+  font-size: 20px;
+  margin: 0;
+}
+
+/*Navigation bar at the top of the page, below the header, this adjusts the look and feel*/
+.navbar {
+  background-color: #03180bfe;  /* 2a3c2e previous shade of green*/
+  position: relative;
+  color: #c3edc0;
+  padding: 0.5rem;
+  z-index: 999;
+  border-radius: 0 0 20px 20px;
+}
+
+.navbar a {
+  color: #ececff;
+  text-decoration: none;
+  justify-content: space-between;
+  margin: 0 30px;
+  font-size: 20px;
+}
+
+/* trying to achieve a swarthmore-style navigation bar that appears and reappears when scrolling */
+.navbar.relative{
+  background-color: #03180bfe;
+  color: #c3edc0;
+  position: fixed;
+  top: 0;
+}
+
+
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+section {
+  margin: 10px;
+}
+
+section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/*To list the skills side by side */
+.skills-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.technical-skills {
+  width: 65%;
+}
+
+.interpersonal-skills {
+  width: 35%;
+}
+
+h4 {
+  margin-top: 0;
+}
+
+ul {
+  list-style-type: disc;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+
+/*To list items side by side using flex property*/
+ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+    }
+    li {
+        width: 50%;
+        padding: 5px;
+    }
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
+ul li a {
+  color: #33473a;
+  text-decoration: none;
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+form input,
+form textarea {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+form input[type="submit"] {
+  background-color: #2a3c2e;
+  color: #edffec;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #33473a;
+}
+
+/*set footer element to 10%*/
+.footer{
+    height: 10%
+}
+
+/* Additional styling for to create the green aesthetic vibe that contrasts the profile photo */
+
+body {
+  background-color: #213a31;
+  color: #bdd6bb;
+}
+
+header h1 {
+  font-size: 36px;
+}
+
+header p {
+  font-size: 18px;
+}
+
+.navbar {
+  background-color: #03180bfe; /* 1d3128 previous shade of green */
+}
+
+.navbar a {
+  font-size: 24px;
+  transition: color 0.2s;
+}
+
+.navbar a:hover {
+  color: #006699;
+}
+
+section h2 {
+  font-size: 28px;
+}
+
+ul li a {
+  color: #d4e5d3;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+ul li a:hover {
+  color: #c8e2c6;
+}
+
+/* Adjust the skills section to have a more modern outlook */
+
+h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.skills-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 10px;
+  background-color: #03180bfe;
+  border-radius: 30px;
+  padding: 10px 0 1;
+  text-align: center;
+}
+
+.technical-skills, .interpersonal-skills {
+  flex: 1;
+  max-width: 400px;
+  padding-left: 30px;
+}
+
+h5 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: left;
+}
+
+ul li {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+  padding-left: 30px;
+  padding: auto;
+  position: relative;
+}
+
+ul li:before {
+  content: "•";
+  color: #bdd6bb;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.interpersonal-skills ul li:before {
+  content: "◦";
+  color: #bdd6bb;
+  font-size: 24px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+@media (max-width: 768px) {
+  section {
+    border-radius: 0;
+  }
+
+  .skills-container {
+    flex-direction: column;
+  }
+
+  .technical-skills, .interpersonal-skills {
+    max-width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+
+
+form input[type="submit"] {
+  background-color: #03180bfe;
+  font-size: 12px;
+  transition: background-color 0.2s;
+}
+
+form input[type="submit"]:hover {
+  background-color: #03180bfe;
+}
+
+/* To make the links the same color as other text even when clicked */
+a {
+  color: #f8f8f8;
+  text-decoration: none; /* to remove the default underline */
+}
+
+a:hover {
+  color: #006699;  /* to add color on hover*/
+  text-decoration: underline; /* to add the underline on hover */
+}
+
+a:visited {
+  color: #f8f8f8; /* to set color of visited links to the same as normal links */
+}
+
+  
+  form input[type="submit"] {
+    background-color: #03180bfe;
+    font-size: 12px;
+    transition: background-color 0.2s;
+  }
+  
+  form input[type="submit"]:hover {
+    background-color: #03180bfe;
+  }
+
+/* Create contact information section with blue hyperlinks, and turn to light green 0n hover */
+
+.contact-info h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.contact-info a {
+  color: #0077cc;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-info a:hover {
+  color: #bdd6bb;  /* to add color on hover*/
+  text-decoration: underline; /* to add the underline on hover */
+}
+
+.contact-info p:last-child {
+  margin-bottom: 0;
+}
+
+/* to include footer that uses bootstrap */
+footer {
+  background-color: #03180bfe;
+  color: #bdd6bb;
+  padding: 20px 0;
+  border-radius: 20px 20px 0 0;
+}
+
+footer a {
+  color: #bdd6bb;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+footer a:hover {
+  color: #006699;  /* to add color on hover*/
+  text-decoration: underline;
+}
+
+main{
+  margin-top: 100px; /* Adjust to match navbar height */
+}
+
+  </style>
+  
+</head>
+<body>
+  <header>
+    <img src="/Users/branley/Desktop/untitled folder/personal-website/picforwebsite.jpeg" alt="Profile Picture">
+    <h1>Branley Mmasi</h1>
+    <p>A Computer Science major and Cognitive Science minor at Swarthmore College</p>
+  </header>
+  <nav id="navbar" class="navbar">
+    <div class="container">
+      <a href="second-website.html">Who Am I?</a>
+      <a href="#course-highlight">Course Highlight</a>
+      <a href="relevant-exp-second-web.html">Relevant Experience</a>
+      <a href="#project">Projects & Certifications</a>
+      <a href="#contact">Contact Information</a>
+    </div>
+  </nav>
+  
+  <main class="container">
+    <section id="about me">
+        <h2>Who Am I?</h2>
+        <p>I am a rising sophomore at Swarthmore College, and I just started to look for CS internship roles for Summer 2023. As a Computer Science major and Cognitive Science minor, my interests are broadly in Artificial Intelligence and Computational Linguistics. <br><br> 
+
+        I intend to use natural language processing to identify knowledge implicit in large collections of text and apply this knowledge to build innovative applications. This way, I want to finesse human-computer interactions and create a proper understanding between machines and humans.</p>
+      </section>
+
+      <section>
+        <h3 id="course-highlight"> Course highlight</h3>
+        <ul class="split-list"> 
+        <li>Introduction to Computer Science</li>
+        <li>Introduction to Computer Systems</li>
+        <li>Data Structures and Algorithms</li>
+        <li>Statistical Methods I</li>
+        <li>Single-variable Calculus I</li>
+        <li>Single-variable Calculus II</li>
+        <li>Linear Algebra</li>
+        <li>Discrete Mathematics</li>
+        <li>Introduction to Economics</li>
+        <li>Introduction to Psychology</li>
+        <li>Social Psychology</li>
+        <li>Introduction to Linguistics</li>
+        <li>Introduction to Philosophy</li>
+        <li>Basics of Reading & Writing Music Notation</li>
+        <li>Acting I</li>
+    </ul>
+    </section>
+    </section>
+    
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-container">
+          <div class="technical-skills">
+            <h5>Technical</h5>
+            <ul>
+              <li>Python Programming Language</li>
+              <li>Swift Programming Language, SwiftUI, Xcode</li>
+              <li>C & C++ Programming Languages</li>
+              <li>iOS — Mobile App Development</li>
+              <li>Data Structures & Algorithms</li>
+              <li>Computer Systems</li>
+              <li>Django</li>
+              <li>Git & GitHub</li>
+              <li>Linux & Unix</li>
+              <li>HTML & CSS</li>
+              <li>REST APIs & RDBMS i.e MySQL</li>
+            </ul>
+          </div>
+          <div class="interpersonal-skills">
+            <h5>Interpersonal</h5>
+            <ul>
+              <li>Leadership</li>
+              <li>Willingness to learn</li>
+              <li>Team work</li>
+              <li>Trustworthy</li>
+              <li>Open-mindedness</li>
+              <li>Dependable</li>
+              <li>Collaborator</li>
+            </ul>
+          </div>
+        </div>        
+    </section>
+    
+    <section>
+      <h2 id="project">Project</h2>
+      <ul>
+        
+        <li><a href="#">Project 1</a></li>
+        <li><a href="#">Project 2</a></li>
+        <li><a href="#">Project 3</a></li>
+        <li><a href="#">Project 4</a></li>
+      </ul>
+    </section>
+    
+    <section>
+      <section class="contact" id="contact">
+        <h2>Contact Information</h2>
+        <div class="contact-info">
+          <div class="address">
+            <p><i class="fas fa-map-marker-alt"></i> 500 College Ave,<br> Swarthmore, PA 19081,<br>USA</p>
+          </div>
+          <div class="email">
+            <i class="far fa-envelope"></i>
+            <a href="mailto:barneybranley@gmail.com">Send me an email 📧</a>
+          </div>
+          <div class="phone">
+            <p> <i class="fas fa-phone"></i>  Phone: +1 (610) 604-8734</p>
+          </div>
+        </div>
+        <div class="contact-info">
+          <p>LinkedIn: <a href="https://www.linkedin.com/in/bmmasi1/" target="_blank"><i class="fab fa-linkedin"></i> Branley Mmasi</a><br></p>
+          <p>Handshake: <a href="https://app.joinhandshake.com/stu/users/33096003" target="_blank">Branley Mmasi</a></p>
+        </div>
+      </section>
+      <h3>Leave me a message</h3>
+      <form>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email" required>
+        
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <input type="submit" value="Send">
+      </form>
+    </section>
+
+    <!-- footer for the page -->
+    <footer>
+      <nav class="navbar">
+        <div class="container">
+          <a href="second-website.html">Who Am I?</a>
+          <a href="#course-highlight">Course Highlight</a>
+          <a href="relevant-exp-second-web.html">Relevant Experience</a>
+          <a href="#project">Projects & Certifications</a>
+          <a href="#contact">Contact Information</a><br><br>
+          <a href="second-website.html">Back To Top</a>
+        </div>
+      </nav>
+    </footer>   
+
+    
+  </main>
+</body>
+</html>
