@@ -1,0 +1,84 @@
+/* src/components/Hero.css */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  background-color: #f7f7f7;
+  padding: 20px;
+  padding-top: 80px; /* Offset for navbar */
+}
+
+.hero-content {
+  display: flex;
+  max-width: 900px;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.profile-left {
+  flex-shrink: 0;
+  margin-right: 20px;
+}
+
+.profile-picture {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.profile-details {
+  text-align: left;
+}
+
+.profile-details h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #555;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.hero-button {
+  padding: 8px 16px;
+  font-size: 0.875rem;
+  cursor: pointer;
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+}
+
+.hero-button-outline {
+  background-color: transparent;
+  color: #0073b1;
+  border: 1px solid #0073b1;
+}
+
+.hero-button:hover {
+  background-color: #005582;
+}
+
+.hero-button-outline:hover {
+  background-color: #e0f0ff;
+}
+
+/* Section Styling */
+.profile-details h2 {
+  font-size: 1.5rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.profile-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 10px 0;
+}

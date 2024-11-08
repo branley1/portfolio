@@ -1,3 +1,5 @@
+/* src/App.css */
+
 .App {
   text-align: center;
 }
@@ -14,18 +16,116 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #e0e0e0;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  max-width: 900px;
+  width: 100%;
+  padding: 1rem;
+}
+
+.profile-picture {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.profile-details {
+  text-align: left;
+}
+
+.profile-details h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.bio {
+  font-size: 1rem;
+  color: #555;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.header-buttons .btn {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: #333;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+/* Hero section sits below the navbar */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px;
+  padding-top: 80px; /* Adjust this value based on navbar height */
+}
+
+.hero-content {
+  max-width: 800px;
+}
+
+.main-content {
+  margin-top: 60px; /* Adjust based on navbar's height */
+}
+
+.container {
+  margin-top: 1.5rem;
+}
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.btn-primary {
+  background-color: #0073b1; /* LinkedIn blue */
+  border-color: #0073b1;
+}
+
+.btn-outline-primary {
+  color: #0073b1;
+  border: 1px solid #0073b1;
+  background-color: transparent;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .profile-picture {
+    margin-bottom: 1rem;
+  }
+  .profile-details {
+    text-align: center;
+  }
 }
 
 @keyframes App-logo-spin {
